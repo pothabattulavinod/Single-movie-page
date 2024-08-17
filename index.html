@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Service</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #141414;
+            color: #e5e5e5;
+        }
+
+        main {
+            padding: 1rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .movie-details-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .movie-details {
+            display: flex;
+            align-items: flex-start;
+            background: #333;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            gap: 1rem;
+        }
+
+        .movie-details img {
+            width: 200px; /* Fixed width */
+            height: 300px; /* Fixed height */
+            object-fit: cover; /* Cover the container and maintain aspect ratio */
+            background-color: #666; /* Background color for empty space */
+            border-radius: 8px;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+
+        .movie-info {
+            color: #ccc;
+            font-size: 1rem;
+            max-width: 500px;
+        }
+
+        .movie-title {
+            font-size: 2rem;
+            margin: 0;
+            font-weight: 700; /* Bold title */
+        }
+
+        .video-section {
+            margin: 1rem 0;
+        }
+
+        .video-container {
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #000; /* Fallback background color */
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .movie-synopsis {
+            background: #333;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif; /* Added Google Font */
+        }
+
+        .movie-synopsis h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #f5f5f5;
+            font-weight: 700; /* Bold heading */
+        }
+
+        .movie-synopsis p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .movie-details {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .movie-details img {
+                width: 150px;
+                height: 225px; /* Adjusted height for smaller screen */
+            }
+
+            .movie-info {
+                font-size: 0.9rem;
+            }
+
+            .movie-title {
+                font-size: 1.5rem;
+            }
+
+            .movie-synopsis {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .movie-title {
+                font-size: 1.25rem;
+            }
+
+            .movie-synopsis h3 {
+                font-size: 1.2rem;
+            }
+
+            .movie-synopsis {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="movie-details-container">
+            <div class="movie-details">
+                <img src="https://moviegalleri.net/wp-content/uploads/2022/03/Actor-Nani-Dasara-Movie-First-Look-HD-Poster.jpg" alt="Dasara Movie Poster">
+                <div>
+                    <h2 class="movie-title">Dasara</h2>
+                    <div class="movie-info">
+                        <p><strong>Directed by:</strong> Srikanth Odela</p>
+                        <p><strong>Starring:</strong> Nani, Keerthy Suresh</p>
+                        <p><strong>Release Date:</strong> March 30, 2023</p>
+                    </div>
+                </div>
+            </div>
+            <section class="video-section">
+                <div class="video-container">
+                    <video controls poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRebPMtXUivmnlEzZHlm3fAODUSQpncenZUJw&usqp=ANd9GcRebPMtXUivmnlEzZHlm3fAODUSQpncenZUJw">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+            <section class="movie-synopsis">
+                <h3>Synopsis</h3>
+                <p>Veerlapally, a small village surrounded by coal mines, is a place where men can't survive without alcohol. Dharni, who loves Vennela, sacrifices his love when he finds out Vennela loves Suri. Years later, Dharni and Suri, who steal coal for a living, face conflicts involving a bar job and village politics, leading to tragic consequences.</p>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
